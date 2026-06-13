@@ -105,4 +105,4 @@ npx playwright show-report
 | TestProductsCRUD | Creación, actualización y eliminación de productos |
 | TestAuth | Login exitoso y negativo con validación de token |
 | TestUsers | Ordenamiento de usuarios ascendente y descendente por apellido |
-| TestE2E | Flujo completo creando producto, usuario y carrito |
+| TestE2E | Flujo completo creando producto, usuario y carrito |# challenge-ui-api-vmetrix-typescrypt-and-playwright
