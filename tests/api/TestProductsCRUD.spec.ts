@@ -1,18 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { ProductsApi } from '../../api/ProductsApi';
+import { newProduct, updatedProduct } from '../../fixtures/products.data';
 
 test.describe('Products CRUD', () => {
 
   test('should create a product', async ({ request }) => {
     const productsApi = new ProductsApi(request);
-
-    const newProduct = {
-      title: 'Test Product',
-      price: 99.99,
-      description: 'Product created for testing',
-      category: 'smartphones',
-      stock: 10,
-    };
 
     const { response: createResponse, body: createdProduct } = await productsApi.create(newProduct);
     expect(createResponse.status()).toBe(201);
@@ -24,15 +17,10 @@ test.describe('Products CRUD', () => {
   test('should update an existing product', async ({ request }) => {
     const productsApi = new ProductsApi(request);
 
-    const updatedData = {
-      title: 'Updated Test Product',
-      price: 149.99,
-    };
-
-    const { response: updateResponse, body: updatedProduct } = await productsApi.update(1, updatedData);
+    const { response: updateResponse, body: updatedProductResponse } = await productsApi.update(1, updatedProduct);
     expect(updateResponse.status()).toBe(200);
-    expect(updatedProduct.title).toBe(updatedData.title);
-    expect(updatedProduct.price).toBe(updatedData.price);
+    expect(updatedProductResponse.title).toBe(updatedProduct.title);
+    expect(updatedProductResponse.price).toBe(updatedProduct.price);
   });
 
   test('should delete an existing product', async ({ request }) => {
