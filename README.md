@@ -26,6 +26,7 @@ Framework de automatización de pruebas desarrollado con Playwright y TypeScript
 
 ```bash
 npm install
+npm install dotenv --save-dev
 npx playwright install
 ```
 
@@ -33,11 +34,11 @@ npx playwright install
 
 Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
-BASE_URL_UI=your_ui_base_url
-BASE_URL_API=your_api_base_url
-SAUCEDEMO_USERNAME=your_username
-SAUCEDEMO_PASSWORD=your_password
-AUTH_USERNAME=your_auth_username
+- BASE_URL_UI=your_ui_base_url
+- BASE_URL_API=your_api_base_url
+- SAUCEDEMO_USERNAME=your_username
+- SAUCEDEMO_PASSWORD=your_password
+- AUTH_USERNAME=your_auth_username
 AUTH_PASSWORD=your_auth_password
 
 ## Ejecución de tests
