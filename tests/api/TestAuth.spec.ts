@@ -6,7 +6,10 @@ test.describe('Auth API', () => {
   test('should login successfully with valid credentials', async ({ request }) => {
     const authApi = new AuthApi(request);
 
-    const { response, body } = await authApi.login('emilys', 'emilyspass');
+    const { response, body } = await authApi.login(
+    process.env.AUTH_USERNAME!,
+    process.env.AUTH_PASSWORD!
+    );
 
     expect(response.status()).toBe(200);
     expect(body.accessToken).toBeDefined();
