@@ -27,7 +27,7 @@ test.describe('Checkout flow', () => {
     await homePage.goToCart();
     await cartPage.checkout();
 
-    await checkoutPage.fillContactInfo('Test', 'Testgin', '1234');
+    await checkoutPage.fillContactInfo('Test', 'Testing', '1234');
 
   const subtotal = await checkoutPage.getSubtotal();
   const tax = await checkoutPage.getTax();
