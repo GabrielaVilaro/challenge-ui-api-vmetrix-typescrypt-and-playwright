@@ -24,10 +24,10 @@ test.describe('E2E Products, Users and Carts', () => {
     expect(createdProduct.title).toBe(newProduct.title);
 
     const newUser = {
-      firstName: 'Gabriela',
-      lastName: 'Vilaro',
+      firstName: 'Test',
+      lastName: 'Testing',
       age: 30,
-      email: 'gabriela.test@vmetrix.com',
+      email: 'test@test.com',
       username: 'gabrielatest',
       password: 'test1234',
     };

@@ -17,7 +17,7 @@ test.describe('Auth API', () => {
   test('should fail login with invalid credentials', async ({ request }) => {
     const authApi = new AuthApi(request);
 
-    const { response, body } = await authApi.login('usuario_invalido', 'password_invalido');
+    const { response, body } = await authApi.login('no_existe_user', 'no_existe_pass');
 
     expect(response.status()).toBe(400);
     expect(body.message).toBeDefined();
