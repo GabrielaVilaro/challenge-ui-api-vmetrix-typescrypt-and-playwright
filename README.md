@@ -10,26 +10,12 @@ Framework de automatización de pruebas desarrollado con Playwright y TypeScript
 
 ## Estructura del proyecto
 
-ChallengeVmetrix/
-├── api/                  # Clases de consumo de API
-│   ├── ApiBase.ts
-│   ├── ProductsApi.ts
-│   ├── UsersApi.ts
-│   ├── AuthApi.ts
-│   └── CartsApi.ts
-├── pages/                # Page Objects
-│   ├── BasePage.ts
-│   ├── LoginPage.ts
-│   ├── HomePage.ts
-│   ├── CartPage.ts
-│   ├── CheckoutPage.ts
-│   └── ProductDescriptionPage.ts
-├── tests/
-│   ├── ui/               # Tests de interfaz
-│   └── api/              # Tests de API
-├── .env                  # Variables de entorno (no incluido en el repo)
-├── playwright.config.ts
-└── README.md
+- `api/` - Clases de consumo de API (ApiBase, ProductsApi, UsersApi, AuthApi, CartsApi)
+- `pages/` - Page Objects (BasePage, LoginPage, HomePage, CartPage, CheckoutPage, ProductDescriptionPage)
+- `tests/ui/` - Tests de interfaz
+- `tests/api/` - Tests de API
+- `playwright.config.ts` - Configuración de Playwright
+- `README.md` - Documentación
 
 ## Requisitos previos
 
