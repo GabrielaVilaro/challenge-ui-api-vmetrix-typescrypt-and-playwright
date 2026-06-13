@@ -7,9 +7,9 @@ test.describe('Products CRUD', () => {
     const productsApi = new ProductsApi(request);
 
     const newProduct = {
-      title: 'Test Product VMetrix',
+      title: 'Test Product',
       price: 99.99,
-      description: 'Product created for testing purposes',
+      description: 'Product created for testing',
       category: 'smartphones',
       stock: 10,
     };
@@ -25,7 +25,7 @@ test.describe('Products CRUD', () => {
     const productsApi = new ProductsApi(request);
 
     const updatedData = {
-      title: 'Updated Test Product VMetrix',
+      title: 'Updated Test Product',
       price: 149.99,
     };
 

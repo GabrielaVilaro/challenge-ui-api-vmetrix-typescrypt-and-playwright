@@ -9,7 +9,10 @@ test.describe('Remove from cart', () => {
     const homePage = new HomePage(page);
 
     await loginPage.navigate();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.login(
+    process.env.SAUCEDEMO_USERNAME!,
+    process.env.SAUCEDEMO_PASSWORD!
+    );
 
     await homePage.addToCartByName('sauce-labs-backpack');
     await homePage.addToCartByName('sauce-labs-bike-light');
