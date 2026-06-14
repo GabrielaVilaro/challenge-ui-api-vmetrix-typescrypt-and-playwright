@@ -12,6 +12,7 @@ Framework de automatización de pruebas desarrollado con Playwright y TypeScript
 
 - `api/` - Clases de consumo de API (ApiBase, ProductsApi, UsersApi, AuthApi, CartsApi)
 - `pages/` - Page Objects (BasePage, LoginPage, HomePage, CartPage, CheckoutPage, ProductDescriptionPage)
+- `fixtures/` - Datos de prueba reutilizables (products.data, users.data)
 - `tests/ui/` - Tests de interfaz
 - `tests/api/` - Tests de API
 - `playwright.config.ts` - Configuración de Playwright
