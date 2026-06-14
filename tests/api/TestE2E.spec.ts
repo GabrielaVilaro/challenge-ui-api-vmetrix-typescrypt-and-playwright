@@ -7,6 +7,8 @@ import { newUser, existingUserId } from '../../fixtures/users.data';
 
 test.describe('E2E Products, Users and Carts', () => {
 
+    // La API devuelve recursos simulados y no conserva los cambios realizados.
+
   test('should create product, user and cart and validate cart by user', async ({ request }) => {
     const productsApi = new ProductsApi(request);
     const usersApi = new UsersApi(request);

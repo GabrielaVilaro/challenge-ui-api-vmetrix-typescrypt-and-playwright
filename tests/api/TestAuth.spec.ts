@@ -13,8 +13,11 @@ test.describe('Auth API', () => {
 
     expect(response.status()).toBe(200);
     expect(body.accessToken).toBeDefined();
-    expect(body.username).toBe('emilys');
-    expect(body.email).toBeDefined();
+    expect(body.username).toBe(process.env.AUTH_USERNAME);
+    expect(body.refreshToken).toBeTruthy();
+    expect(body.accessToken.split('.')).toHaveLength(3);
+    expect(body.refreshToken.split('.')).toHaveLength(3);
+    expect(body.email).toContain('@');
   });
 
   test('should fail login with invalid credentials', async ({ request }) => {
@@ -24,5 +27,6 @@ test.describe('Auth API', () => {
 
     expect(response.status()).toBe(400);
     expect(body.message).toBeDefined();
+    expect(body.message).toBe('Invalid credentials');
   });
 });
