@@ -4,6 +4,8 @@ import { newProduct, updatedProduct } from '../../fixtures/products.data';
 
 test.describe('Products CRUD', () => {
 
+    // El GET no se agrega porque se valida en el test de paginación y porque la API no persiste datos
+
   test('should create a product', async ({ request }) => {
     const productsApi = new ProductsApi(request);
 
